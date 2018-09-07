@@ -11,8 +11,18 @@ const printToDom = (stringToPrint, divId) => {
 // };
 
 
-document.getElementById("funkBut").addEventListener("click", function(){
+// document.getElementById("SPANISH").addEventListener("click", function(){
+//     let x = document.getElementById("inText").value;
+//     document.getElementById("demo").innerHTML = x;
+// });
+
+
+document.getElementById("SPANISH").addEventListener("click", function(){
+    var elmnt = document.createElement("p");
+    elmnt.setAttribute("id","dom2")
+    var item = document.getElementById("dom");
+    item.replaceChild(elmnt, item.childNodes[0]);
     let x = document.getElementById("inText").value;
-    document.getElementById("demo").innerHTML = x;
+    return printToDom(x, "dom2")
 });
 
